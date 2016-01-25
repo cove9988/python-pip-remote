@@ -139,7 +139,7 @@ like you would on an internet connected system.
 There is a pre-built remote bundle for Python 2.7.11 available for you to download
 directory if you don't want to run local.sh. It is available here: http://projects.joelinoff.com/python-pip-remote/python-2.7.11-remote.tar.bz2.
 
-The remote bundle file size is about 87MB. The `sum` checksum is `38086 89226`.
+The remote bundle file size is about 87MB. The `sum` checksum is `30819 89226`.
 
 Just copy it to your remote system and follow steps 5-9 to build, install
 and verify it.
