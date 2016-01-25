@@ -104,7 +104,7 @@ if [ ! -f $confRemoteInstallPath/bin/pip-remote ] ; then
 BinDir=\$(cd \$(dirname \$0) ; pwd)
 RootDir=\$(cd \$(dirname \$BinDir) ; pwd)
 PkgDir=\$RootDir/pkg
-\$BinDir/pip \$\* --no-index --find-links=file://\$PkgDir
+\$BinDir/pip \$* --no-index --find-links=file://\$PkgDir
 EOF
     chmod a+x $confRemoteInstallPath/bin/pip-remote
 fi
