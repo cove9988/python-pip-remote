@@ -6,7 +6,7 @@
 #
 
 # VERSION: 0.0.1
-readonly ThisDir=$(pwd $(cd $(dirname $0)))
+readonly ThisDir=$(cd $(dirname $0) ; pwd)
 set -e
 source $ThisDir/utils.sh
 source $ThisDir/os.path.sh
