@@ -111,7 +111,8 @@ sections.
 ```
 #### Step 7. Run the remote.sh script
    This will build and install Python and pip.
-   It will also list the contents of the pip mirror.
+   It will also create the pip-remote script and list the contents
+   of the pip mirror.
 ```bash
       root@remote$ ./remote.sh
 ```
@@ -120,8 +121,8 @@ sections.
    You verify the installation by listing the contents of the pip
    mirror and, optionally, installing virtualenv.
 ```bash
-      root@remote$ sudo /opt/python/2.7.11/bin/pip list --no-index --find-links=file:///opt/python/2.7.11/pkg/
-      root@remote$ sudo /opt/python/2.7.11/bin/pip install virtualenv --no-index --find-links=file:///opt/python/2.7.11/pkg/
+      root@remote$ sudo /opt/python/2.7.11/bin/pip-remote list
+      root@remote$ sudo /opt/python/2.7.11/bin/pip-remote install
 ```
 #### Step 9. Clean up
 
@@ -134,17 +135,11 @@ sections.
 After the installation is complete you can use Python and pip just
 like you would on an internet connected system.
 
-To make things a little easier you might want to define some aliases like:
-```bash
-      alias pip="/opt/python/2.7.11/bin/pip $* -no-index --find-links=file:///opt/python/2.7.11/pkg/"
-      alias python=/opt/python/2.7.11/bin/python $*"
-```
-
 ## Pre-built remote bundle for Python 2.7.11
 There is a pre-built remote bundle for Python 2.7.11 available for you to download
 directory if you don't want to run local.sh. It is available here: http://projects.joelinoff.com/python-pip-remote/python-2.7.11-remote.tar.bz2.
 
-The remote bundle file size is about 87MB. The `sum` checksum is `4035 89225`.
+The remote bundle file size is about 87MB. The `sum` checksum is `38086 89226`.
 
 Just copy it to your remote system and follow steps 5-9 to build, install
 and verify it.
