@@ -42,7 +42,8 @@ sections.
 
 #### Step 1. Download
 
-   You can download this package by using the following git command:
+   You can download this package by using the following git command
+   on your local, internet connected host:
 ```bash
       me@local$ mkdir -p ~/work/remote-python
       me@local$ cd ~/work/remote-python
@@ -74,6 +75,8 @@ sections.
 
    When it is complete you will have a remote bundle in
    remote.tar.bz2.
+   
+   The local.sh script requires access to the internet.
 
 #### Step 4. Copy the remote bundle to the remote server.
 
@@ -111,7 +114,7 @@ sections.
 ```bash
       root@remote$ ./remote.sh
 ```
-Step 8. Verify the installation
+#### Step 8. Verify the installation
 
    You verify the installation by listing the contents of the pip
    mirror and, optionally, installing virtualenv.
@@ -119,10 +122,19 @@ Step 8. Verify the installation
       root@remote$ sudo /opt/python/2.7.11/bin/pip list --no-index --find-links=file:///opt/python/2.7.11/pkg/
       root@remote$ sudo /opt/python/2.7.11/bin/pip install virtualenv --no-index --find-links=file:///opt/python/2.7.11/pkg/
 ```
-Step 9. Clean up
+#### Step 9. Clean up
 
    One you have verified that everything works you delete the work
    directory to save disk space.
-
+```bash
       root@remote$ rm -rf ~/work/python
+```
+## Post Installation
+After the installation is complete you can use Python and pip just
+like you would on an internet connected system.
 
+To make things a little easier you might want to define some aliases like:
+```bash
+      alias pip="/opt/python/2.7.11/bin/pip $* -no-index --find-links=file:///opt/python/2.7.11/pkg/"
+      alias python=/opt/python/2.7.11/bin/python $*"
+```
