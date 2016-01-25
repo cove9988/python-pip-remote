@@ -94,10 +94,26 @@ else
 fi
 
 # ================================================================
+# Create pip-remote
+# ================================================================
+if [ ! -f $confRemoteInstallPath/bin/pip-remote ] ; then
+    cat >$confRemoteInstallPath/bin/pip-remote <<EOF
+#!/bin/bash
+
+# Don't use readlink, it is not available with -f or -m on Mac OSX.
+BinDir=\$(cd \$(dirname \$0) ; pwd)
+RootDir=\$(cd \$(dirname \$BinDir) ; pwd)
+PkgDir=\$RootDir/pkg
+\$BinDir/pip \$\* --no-index --find-links=file://\$PkgDir
+EOF
+    chmod a+x $confRemoteInstallPath/bin/pip-remote
+fi
+
+# ================================================================
 # Verify the installation.
 # ================================================================
 utils.info "Verifying the installation"
-utils.runx $confRemoteInstallPath/bin/pip list --no-index --find-links=file://$confRemoteInstallPath/pkg/
+utils.runx $confRemoteInstallPath/bin/pip-remote list
 
 # ================================================================
 # Epilogue.
@@ -114,8 +130,8 @@ The installation is in $confRemoteInstallPath.
 To verify the installation try listing the contents of the pip mirror package
 and, optionally, installing virtualenv.
 
-   \$ $confRemoteInstallPath/bin/pip list --no-index --find-links=file://$confRemoteInstallPath/pkg/
-   \$ $confRemoteInstallPath/bin/pip install virtualenv --no-index --find-links=file://$confRemoteInstallPath/pkg/
+   \$ $confRemoteInstallPath/bin/pip-remote list
+   \$ $confRemoteInstallPath/bin/pip-remote install
 
 EOF
 
