@@ -139,3 +139,12 @@ To make things a little easier you might want to define some aliases like:
       alias pip="/opt/python/2.7.11/bin/pip $* -no-index --find-links=file:///opt/python/2.7.11/pkg/"
       alias python=/opt/python/2.7.11/bin/python $*"
 ```
+
+## Pre-built remote bundle for Python 2.7.11.
+There is a pre-built remote bundle for Python 2.7.11 available for you to download
+directory if you don't want to run local.sh. It is available here: http://projects.joelinoff.com/python-pip-remote/python-2.7.11-remote.tar.bz2.
+
+The remote bundle file size is about 87MB. The `sum` checksum is `4035 89225`.
+
+Just copy it to your remote system and follow steps 5-9 to build, install
+and verify it.
