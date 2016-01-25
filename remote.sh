@@ -131,7 +131,7 @@ To verify the installation try listing the contents of the pip mirror package
 and, optionally, installing virtualenv.
 
    \$ $confRemoteInstallPath/bin/pip-remote list
-   \$ $confRemoteInstallPath/bin/pip-remote install
+   \$ $confRemoteInstallPath/bin/pip-remote install virtualenv
 
 EOF
 
