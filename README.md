@@ -30,11 +30,11 @@ Here is how you use the tools to create a remote installation.
 
 1. Download this package to your local host.
 2. Configure the setup by editing setup.conf.
-3. Run the local.sh script.
-4. Copy the remote.tar.bz2 archive to the remote server.
+3. Run the `local.sh` script.
+4. Copy the `remote.tar.bz2` archive to the remote server.
 5. Login to the remote server.
 6. Unpack the archive.
-7. Run the remote.sh script.
+7. Run the `remote.sh` script to build, install and verify on the remote server.
 8. Verify the installation.
 9. Clean up.
 
