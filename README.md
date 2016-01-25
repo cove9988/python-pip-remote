@@ -7,7 +7,8 @@ remote server with no internet access from a local host with internet
 access that is running an OS that is different than the remote OS.
 
 This is useful, for example, if you want to create a Python
-installation for Ubuntu on a remote server from your Mac Book laptop.
+installation with a pip mirror on a remote CentOS server from
+your Mac Book laptop.
 
 If the local OS and the remote OS are the same, you can simply build
 python locally and rsync it over.
@@ -29,11 +30,11 @@ Here is how you use the tools to create a remote installation.
 
 1. Download this package to your local host.
 2. Configure the setup by editing setup.conf.
-3. Run the local.sh script.
-4. Copy the remote.tar.bz2 archive to the remote server.
+3. Run the `local.sh` script.
+4. Copy the `remote.tar.bz2` archive to the remote server.
 5. Login to the remote server.
 6. Unpack the archive.
-7. Run the remote.sh script.
+7. Run the `remote.sh` script to build, install and verify on the remote server.
 8. Verify the installation.
 9. Clean up.
 
@@ -138,3 +139,15 @@ To make things a little easier you might want to define some aliases like:
       alias pip="/opt/python/2.7.11/bin/pip $* -no-index --find-links=file:///opt/python/2.7.11/pkg/"
       alias python=/opt/python/2.7.11/bin/python $*"
 ```
+
+## Pre-built remote bundle for Python 2.7.11
+There is a pre-built remote bundle for Python 2.7.11 available for you to download
+directory if you don't want to run local.sh. It is available here: http://projects.joelinoff.com/python-pip-remote/python-2.7.11-remote.tar.bz2.
+
+The remote bundle file size is about 87MB. The `sum` checksum is `4035 89225`.
+
+Just copy it to your remote system and follow steps 5-9 to build, install
+and verify it.
+
+## Acknowledgements
+This package relies on the excellent work in pip2pi: https://github.com/wolever/pip2pi and on the folks at Python Software Foundation: https://pypi.python.org/pypi.
