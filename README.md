@@ -148,3 +148,6 @@ The remote bundle file size is about 87MB. The `sum` checksum is `4035 89225`.
 
 Just copy it to your remote system and follow steps 5-9 to build, install
 and verify it.
+
+## Acknowledgements
+This package relies on the excellent work in pip2pi: https://github.com/wolever/pip2pi and on the folks at Python Software Foundation: https://pypi.python.org/pypi.
