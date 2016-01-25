@@ -140,7 +140,7 @@ To make things a little easier you might want to define some aliases like:
       alias python=/opt/python/2.7.11/bin/python $*"
 ```
 
-## Pre-built remote bundle for Python 2.7.11.
+## Pre-built remote bundle for Python 2.7.11
 There is a pre-built remote bundle for Python 2.7.11 available for you to download
 directory if you don't want to run local.sh. It is available here: http://projects.joelinoff.com/python-pip-remote/python-2.7.11-remote.tar.bz2.
 
