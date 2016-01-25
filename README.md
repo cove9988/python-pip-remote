@@ -7,7 +7,8 @@ remote server with no internet access from a local host with internet
 access that is running an OS that is different than the remote OS.
 
 This is useful, for example, if you want to create a Python
-installation for Ubuntu on a remote server from your Mac Book laptop.
+installation with a pip mirror on a remote CentOS server from
+your Mac Book laptop.
 
 If the local OS and the remote OS are the same, you can simply build
 python locally and rsync it over.
