@@ -78,6 +78,11 @@ sections.
    remote.tar.bz2.
    
    The local.sh script requires access to the internet.
+   
+   I ran into a problem with some of the packages that appeared to
+   be OS specific (like numpy). To workaround the problem I created
+   a VM on MAC running the remote OS, installed this package
+   and created the bundle there.
 
 #### Step 4. Copy the remote bundle to the remote server.
 
