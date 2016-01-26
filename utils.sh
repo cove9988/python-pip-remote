@@ -58,7 +58,8 @@ function utils.install.pkgs() {
     if (( $HasYum == 0 )) ; then
         # https://github.com/yyuu/pyenv/wiki/Common-build-problems
         local RequiredPackages=(zlib-devel bzip2 bzip2-devel readline-devel ncurses-devel \
-                                     sqlite sqlite-devel openssl openssl-devel krb5-devel)
+                                     sqlite sqlite-devel openssl openssl-devel krb5-devel \
+				     libffi-devel)
         utils.runx sudo yum install -y ${RequiredPackages[@]}
     elif (( $HasApt == 0 )) ; then
         # https://github.com/yyuu/pyenv/wiki/Common-build-problems
